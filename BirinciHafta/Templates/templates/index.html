@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2 text-center">
+        <h1 class="display-4 mb-4">Günlük Uygulamasına Hoş Geldiniz</h1>
+        <p class="lead mb-4">Günlüklerinizi yazın, düzenleyin ve saklayın. Hayatınızın önemli anlarını kaydedin.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="/register" class="btn btn-primary btn-lg px-4 gap-3">Hemen Başla</a>
+            <a href="/login" class="btn btn-outline-secondary btn-lg px-4">Giriş Yap</a>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="bi bi-pencil-square display-4 text-primary mb-3"></i>
+                <h3>Günlük Yaz</h3>
+                <p>Günlük duygularınızı ve düşüncelerinizi yazın.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="bi bi-calendar-check display-4 text-primary mb-3"></i>
+                <h3>Takip Et</h3>
+                <p>Günlüklerinizi tarih sırasına göre takip edin.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="bi bi-shield-lock display-4 text-primary mb-3"></i>
+                <h3>Güvenli</h3>
+                <p>Günlükleriniz sadece size özel, güvenle saklanır.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
