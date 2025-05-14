@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "ad": "Laptop Lenovo",
+        "aciklama": "Lenovo ThinkPad X1 Carbon - 16GB RAM",
+        "kategori": "Elektronik",
+        "miktar": 12,
+        "kullanici_id": 11,
+        "kullanici_adi": "hakan123456"
+    },
+    {
+        "id": 2,
+        "ad": "Klavye Logitech",
+        "aciklama": "Kablosuz klavye - siyah renk",
+        "kategori": "Aksesuar",
+        "miktar": 35,
+        "kullanici_id": 11,
+        "kullanici_adi": "hakan123456"
+    },
+    {
+        "id": 3,
+        "ad": "Yazıcı HP",
+        "aciklama": "HP LaserJet M15w",
+        "kategori": "Ofis",
+        "miktar": 5,
+        "kullanici_id": 11,
+        "kullanici_adi": "hakan123456"
+    }
+]

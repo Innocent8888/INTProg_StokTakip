@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Ürünü Düzenle</h2>
+    <form method="POST">
+        <div class="mb-3">
+            <label>Ürün Adı</label>
+            <input type="text" name="name" class="form-control" value="{{ urun.name }}" required>
+        </div>
+        <div class="mb-3">
+            <label>Kategori</label>
+            <input type="text" name="category" class="form-control" value="{{ urun.category }}" required>
+        </div>
+        <div class="mb-3">
+            <label>Miktar</label>
+            <input type="number" name="quantity" class="form-control" value="{{ urun.quantity }}" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Güncelle</button>
+        <a href="{{ url_for('urun_listesi') }}" class="btn btn-secondary">Geri</a>
+    </form>
+</div>
+{% endblock %}

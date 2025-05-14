@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <div style="text-align: center;">
+                <h1 class="mb-2">Hoş Geldiniz, {{ current_user.name }}</h1>
+                <h3>Ürün Yönetimi Uygulamasına Hoş Geldiniz</h3>
+                <p>Ürünlerinizi yönetin, envanterinizi takip edin ve raporları kolayca görüntüleyin.</p><br>
+            </div>
+
+            <!-- İstatistik Kartları -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Kategori</h5>
+                            <h2 class="display-4">{{ kategori_sayisi }}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-success text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Ürün Listesi</h5>
+                            <h2 class="display-4">{{ urun_sayisi }}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-info text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Stok durumu</h5>
+                            <h2 class="display-4">{{ son_guncelleme }}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-warning text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Kritik</h5>
+                            <h2 class="display-4">{{ kritik }}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Ürünlerim</h2>
+                <a href="{{ url_for('urun_ekle') }}" class="btn btn-primary">
+                    <i class="bi bi-plus-circle"></i> Yeni Ürün Ekle
+                </a>
+            </div>
+
+            <div class="row">
+                {% for urun in urunler %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ urun.name }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ urun.category }}</h6>
+                            <p class="card-text">Miktar: {{ urun.quantity }}</p>
+                            <span class="badge bg-info">Son Güncelleme: {{ urun.updated_at }}</span>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <div class="d-flex justify-content-between">
+                                <a href="{{ url_for('urun_duzenle', id=urun.id) }}" class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-pencil"></i> Düzenle
+                                </a>
+                                <a href="{{ url_for('urun_sil', id=urun.id) }}" class="btn btn-outline-danger btn-sm">
+                                    <i class="bi bi-trash"></i> Sil
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <p class="text-center">Hiç ürün bulunamadı.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

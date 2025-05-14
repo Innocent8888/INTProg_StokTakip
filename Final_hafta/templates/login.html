@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header text-center">
+                <h4>Giriş Yap</h4>
+            </div>
+            <div class="card-body">
+                <form action="/login" method="POST">
+                    <!-- Error/Success Message Display -->
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    <div class="alert alert-danger" role="alert">
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    {% endwith %}
+
+                    <!-- Email Input -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-posta</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="E-posta adresinizi girin" required>
+                    </div>
+
+                    <!-- Password Input -->
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Şifre</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Şifrenizi girin" required>
+                    </div>
+
+                    <!-- Remember Me Checkbox -->
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe" name="remember">
+                        <label class="form-check-label" for="rememberMe">Beni Hatırla</label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-box-arrow-in-right"></i> Giriş Yap
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Register Link -->
+                <div class="text-center mt-3">
+                    <p>Hesabınız yok mu? <a href="/register">Kayıt Ol</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
