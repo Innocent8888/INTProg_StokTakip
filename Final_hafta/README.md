@@ -35,11 +35,9 @@ Kullanıcı karşılama alanı
 
 Toplam ürün
 
-Düşük stoklu ürünler
-
 Bu ay eklenen ürünler
 
-Ortalama stok miktarı
+kritik stokluk ürünler
 
 
 Ürün kartları grid görünümü
@@ -84,9 +82,12 @@ Proje Yapısı
 StockApp/
 ├── templates/
 │   ├── base.html
+│   ├── index.html
 │   ├── dashboard.html
 │   ├── urun_ekle.html
 │   ├── urun_duzenle.html
+│   ├── urun_ekle.html
+│   ├── urunler.html
 │   ├── login.html
 │   └── register.html
 ├── static/

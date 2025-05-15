@@ -1,0 +1,77 @@
+.index-background {
+    background-image: url('/static/img/3d-rendering-cartoon-shopping-cart.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+}
+                .hero-section {
+                height: 30vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            h1 {
+                text-shadow: 0px 0px 5px rgb(65, 65, 65);
+            }
+
+.login-background {
+    background-image: url('/static/img/WhatsApp Image 2025-05-15 at 16.06.54 (4).jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+}
+.register-background {
+    background-image: url('/static/img/WhatsApp Image 2025-05-15 at 16.06.56 (4).jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.urun_duzenle-background {
+    background-image: url('/static/img/WhatsApp Image 2025-05-15 at 16.06.56 (2).jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+}
+.urun_ekle-background {
+    background-image: url('/static/img/interior-large-distribution-warehouse-with-shelves-stacked-with-palettes-goods-ready-market.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.dashboard-background {
+    background-image: url('/static/img/supply-chain-representation-still-life.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+}
+.urunler-background {
+    background-image: url('/static/img/WhatsApp Image 2025-05-15 at 16.06.56 (2).jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+}

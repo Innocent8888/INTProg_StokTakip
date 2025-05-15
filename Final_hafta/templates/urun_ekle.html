@@ -1,20 +1,20 @@
 {% extends "base.html" %}
-
+{% block page_class %}urun_ekle-background{% endblock %}
 {% block content %}
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <h2 class="mb-4 text-center">Yeni Ürün Ekle</h2>
+            <h1 class="mb-4 text-center text-white">Yeni Ürün Ekle</h2>
             <form method="POST">
-                <div class="mb-3">
+                <div class="mb-3 hero text-white">
                     <label for="name" class="form-label">Ürün Adı</label>
                     <input type="text" id="name" name="name" class="form-control" placeholder="Ürün adını girin" required>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 hero text-white">
                     <label for="category" class="form-label">Kategori</label>
                     <input type="text" id="category" name="category" class="form-control" placeholder="Kategori girin" required>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 hero text-white">
                     <label for="quantity" class="form-label">Miktar</label>
                     <input type="number" id="quantity" name="quantity" class="form-control" placeholder="Adet girin" required min="1">
                 </div>
